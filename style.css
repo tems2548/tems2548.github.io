@@ -395,7 +395,9 @@ section .text-container .text-box {
   box-sizing: border-box;
 }
 
-
+#section-3 #anit{
+  color: #ffffff;
+}
 #section-3 .main-title{
   color: #2d2d2d;
   text-align: center;
@@ -515,7 +517,7 @@ pt {
   border-right: solid 3px rgba(0,255,0,.75);
   white-space: nowrap;
   overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
+  font-family: "Asap", sans-serif;  
   font-size: 1rem;
   color: rgba(255,255,255,.70);
 }
@@ -531,4 +533,65 @@ pt {
 @keyframes animated-text{
   from{width: 0;}
   to{width: 472px;}
+}
+.wrapper {
+margin: 4vw;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper .first-text {
+  font-size: 6vw;
+  color: #ffffff42;
+}
+
+.wrapper .sec-texts {
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.sec-texts li {
+  position: relative;
+  top: 0;
+  font-size: 6vw;
+  color: #0ef;
+  list-style: none;
+  padding: 0 20px;
+  text-shadow: 0 0 10px #0ef;
+  animation: slide 12s steps(4) infinite, colorful 6s infinite;
+}
+
+@keyframes slide {
+  100% {
+      top: -360px;
+  }
+}
+
+@keyframes colorful {
+  100% {
+      filter: hue-rotate(360deg);
+  }
+}
+
+.sec-texts li span {
+  position: relative;
+}
+
+.sec-texts li span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 400px;
+  height: 90px;
+  background: #000;
+  border-left: 3px solid #0ef;
+  animation: typing 1.5s steps(20) infinite alternate;
+}
+
+@keyframes typing {
+  100% {
+      left: 100%;
+      margin: 0 -35px 0 35px;
+  }
 }
