@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Audiowide");
+@import url("https://fonts.googleapis.com/css?family=Abel");
 @import url("fontp.js");
 * {
   margin: 0;
@@ -70,7 +71,7 @@ transform: translate(-50%);
 
 #section-1 ul li a {
     padding: 1.25vw;
-    font-size: 2vw;
+    font-size: 2.5vw;
     color: white;
     font-family:"Audiowide", sans-serif;
 }
@@ -88,7 +89,7 @@ transform: translate(-50%);
 
 }
 #section-1 ul li {
-    margin: 1rem;
+    margin: 1.5vw;
 }
 #section-1 li a:hover {
     border-radius: 20px;
@@ -542,6 +543,7 @@ margin: 4vw;
 
 .wrapper .first-text {
   font-size: 6vw;
+  font-family: 'Abel';
   color: #ffffff42;
 }
 
@@ -582,11 +584,11 @@ margin: 4vw;
   content: '';
   position: absolute;
   left: 0;
-  width: 400px;
+  width: 60vw;
   height: 90px;
   background: #000;
   border-left: 3px solid #0ef;
-  animation: typing 1.5s steps(20) infinite alternate;
+  animation: typing 1.5s linear infinite alternate;
 }
 
 @keyframes typing {
