@@ -161,6 +161,7 @@ section:nth-child(2) {
 }
 section:nth-child(3) {
   color: white;
+  display: flex;
 }
 section:nth-child(4) {
   color: #42455a;
@@ -433,14 +434,14 @@ section .text-container .text-box {
 #section-3 .contents {
   position: relative;
   width: 100%;
-  max-width: 35vw;
+  max-width: 33vw;
   margin: auto;
   overflow: hidden;
   transition: 0.7s;
 }
 #section-3 .contents:hover{
   transform: translateY(-10px);
-  scale: 1.1;
+  transform: scale(1.1);
   
 }
 #section-3 .contents .content-overlay {
@@ -508,10 +509,7 @@ section .text-container .text-box {
 }
 #section-3 #anit {
   margin-top: 4rem;
-  animation-name: textflicker;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  
+
 }
 
 pt {
@@ -544,7 +542,15 @@ margin: 4vw;
 .wrapper .first-text {
   font-size: 6vw;
   font-family: 'Abel';
-  color: #ffffff42;
+  animation: flick 10s infinite;
+}
+@keyframes flick{
+  from{
+    color:white
+  }
+  to{
+    color: #ffffff42;
+  }
 }
 
 .wrapper .sec-texts {
