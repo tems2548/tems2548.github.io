@@ -9,6 +9,8 @@
   font-family: "Asap", sans-serif;
   scroll-behavior: smooth;
   cursor: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 .cursor {
   display: block;
@@ -542,7 +544,8 @@ margin: 4vw;
 .wrapper .first-text {
   font-size: 6vw;
   font-family: 'Abel';
-  animation: flick 10s infinite;
+  color: #ffffff42;
+  /* animation: flick 10s infinite; */
 }
 @keyframes flick{
   from{
