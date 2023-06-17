@@ -536,14 +536,16 @@ pt {
   to{width: 472px;}
 }
 .wrapper {
-margin: 4vw;
+  margin: 6vw;
   display: flex;
   justify-content: center;
+
 }
 
 .wrapper .first-text {
-  font-size: 6vw;
+  font-size: 2vw;
   font-family: 'Abel';
+  margin: 0;
   color: #ffffff42;
   /* animation: flick 10s infinite; */
 }
@@ -568,7 +570,7 @@ margin: 4vw;
   font-size: 6vw;
   color: #0ef;
   list-style: none;
-  padding: 0 20px;
+  padding-left:  25px;
   text-shadow: 0 0 10px #0ef;
   animation: slide 12s steps(4) infinite, colorful 6s infinite;
 }
