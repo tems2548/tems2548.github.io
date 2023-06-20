@@ -371,12 +371,13 @@ section .text-container .text-box {
   color: #fff;
   font-size: 6vw;
   position: absolute;
-
+  font-family: "Audiowide", sans-serif;
 }
 
 .content h2:nth-child(1) {
   color: transparent;
   text-align: center;
+  font-family: "Audiowide", sans-serif;
   -webkit-text-stroke: 2px #03f7ff;
 }
 
@@ -727,12 +728,12 @@ text-underline-offset: 1em;
 
 #section-4 h2 {
   position: relative;
-  font-family: sans-serif;
+  font-family: "Audiowide", sans-serif;
   text-transform: uppercase;
-  font-size: 4vw;
+  font-size: 5.5vw;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(90deg, #000, #fff, #000);
+  background: linear-gradient(90deg, #7359f3, #20bdff, #a5fecb);
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 5s linear infinite;
