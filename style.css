@@ -760,11 +760,11 @@ body { font-family: sans-serif; }
 
 .scene {
   display: inline-block;
-  width: 200px;
-  height: 260px;
+  width: 20vw;
+  height: 26vw;
 /*   border: 1px solid #CCC; */
   margin: 2vw 0;
-  perspective: 600px;
+  perspective: 50vw;
 }
 
 .card {
@@ -778,7 +778,7 @@ body { font-family: sans-serif; }
 }
 
 .card.is-flipped {
-  transform:  rotateY(-180deg) translateX(-20px);
+  transform:  rotateY(-180deg) translateX(10vw);
   
 }
 
