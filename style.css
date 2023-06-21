@@ -716,7 +716,7 @@ text-underline-offset: 1em;
 
 #section-4 .container-2 {
   background-color: rgba(255, 255, 255, 0.426);
-  width: 40vw;
+  width: 45vw;
   list-style: none;
   margin: 2rem;
   border-radius: 20px;
@@ -733,7 +733,7 @@ text-underline-offset: 1em;
   font-size: 5.5vw;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(90deg, #7359f3, #20bdff, #a5fecb);
+  background: linear-gradient(90deg, #000, #fff, #000);
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 5s linear infinite;
@@ -749,4 +749,57 @@ text-underline-offset: 1em;
   100% {
     background-position: 500%;
   }
+}
+.contact-img{
+   height: 32vw;
+   margin: 2rem;
+   border-radius: 20px;
+  display: flex;
+}
+body { font-family: sans-serif; }
+
+.scene {
+  display: inline-block;
+  width: 200px;
+  height: 260px;
+/*   border: 1px solid #CCC; */
+  margin: 2vw 0;
+  perspective: 600px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform:  rotateY(-180deg) translateX(-20px);
+  
+}
+
+.card__face {
+  position: absolute;
+  width: 30vw;
+  height: 32vw;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background-image: url("img/IMG_2719.jpg");
+  background-size: cover;
+}
+
+.card__face--back {
+  background: slateblue;
+  transform: rotateY(180deg);
 }
