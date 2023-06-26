@@ -58,9 +58,9 @@
                   <h1 class="sub-title">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, similique?</p>
                     <div class="tab-title">
-                      <p class="tab-links active-link" onclicks="opentab('SKILLS')">SKILLS</p>
-                      <p class="tab-links" onclicks="opentab('Experience')">Experience</p>
-                      <p class="tab-links" onclicks="opentab('education')" >education</p>
+                      <p class="tab-links active-link" onclick="opentab('SKILLS')">SKILLS</p>
+                      <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                      <p class="tab-links" onclick="opentab('education')" >education</p>
                     </div>
                     <div class="tab-contents active-tab" id="SKILLS">
                       <ul>
@@ -94,19 +94,7 @@
         </div>
       </div>
     </div>
-        <script>
-      var tablinks = document.getElementsByClassName('tab-links');
-      var tabcontents =document.getElementsByClassName('tab-contents');
-      function opentab(tabname){
-        for(tablink of tablinks ){
-          tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-      }
-    </script>
+        <script src="about.js"></script>
   </section>
 
   <section id="section-3">
