@@ -91,36 +91,23 @@
               </div>
             </div>
           </div>
-          <!-- <p>
-            <strong>NAME</strong> :
-          <p style="color: rgb(255, 82, 82);">&emsp;"Ungsuchaval Samitchart",<br></p>
-          <strong>NICKNAME</strong> : <p style="color: rgb(179, 175, 255);">&emsp; "TEMZ",<br></p>
-          <strong>BORN IN</strong> : <p style="color: rgb(148, 209, 99);">&emsp; "9 June 2005" ,<br></p>
-          <strong>SKILLS</strong> :<p style="color: rgb(56, 142, 253);"> &emsp; "C++, Python, Dart, Flutter, Arduino,
-            Electronic,
-            HTML, CSS,"<br></p>
-          <strong>HOBBY</strong> : <p style="color: rgb(214, 109, 198);">&emsp; [&nbsp;{IoT builder} , {web/app
-            dev}&nbsp;]</p>
-          </p> -->
         </div>
-
-
       </div>
     </div>
+        <script>
+      var tablinks = document.getElementsByClassName('tab-links');
+      var tabcontents =document.getElementsByClassName('tab-contents');
+      function opentab(tabname){
+        for(tablink of tablinks ){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+      }
+    </script>
   </section>
-  <script>
-    var tablinks = document.getElementsByClassName('tab-links');
-    var tabcontents =document.getElementsByClassName('tab-contents');
-    function opentab(tabname){
-      for(tablink of tablinks ){
-        tablink.classList.remove("active-link");
-      }
-      for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
-      }
-    }
-
-  </script>
 
   <section id="section-3">
     <div class="container reveal fade-bottom">
