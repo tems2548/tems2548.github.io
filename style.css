@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Audiowide");
 @import url("https://fonts.googleapis.com/css?family=Abel");
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1;1,300;1,400;1,700&display=swap');
 @import url("fontp.js");
 
 * {
@@ -209,10 +210,11 @@ section h2 {
   display: block;
   float: right;
   margin-right: 13%;
-  margin-top: 20px;
+  margin-top: 3%;
+  margin-left: 7%;
   border-radius: 20px;
   transition: linear 0.5s;
-filter: grayscale(100%);
+  filter: grayscale(60%);
 
 
   /* margin-right: auto; */
@@ -220,8 +222,8 @@ filter: grayscale(100%);
 }
 
 #section-2 img:hover {
-filter: grayscale(0%);
-  transform: scale(1.1);
+  filter: grayscale(0%);
+  transform: scale(1.05);
 
   /* margin-right: auto; */
 
@@ -754,19 +756,23 @@ text-underline-offset: 1em;
     background-position: 500%;
   }
 }
-.contact-img{
-   height: 32vw;
-   margin: 2rem;
-   border-radius: 20px;
+
+.contact-img {
+  height: 32vw;
+  margin: 2rem;
+  border-radius: 20px;
   display: flex;
 }
-body { font-family: sans-serif; }
+
+body {
+  font-family: sans-serif;
+}
 
 .scene {
   display: inline-block;
   width: 20vw;
   height: 26vw;
-/*   border: 1px solid #CCC; */
+  /*   border: 1px solid #CCC; */
   margin: 2vw 0;
   perspective: 50vw;
 }
@@ -782,8 +788,8 @@ body { font-family: sans-serif; }
 }
 
 .card.is-flipped {
-  transform:  rotateY(-180deg) translateX(10vw);
-  
+  transform: rotateY(-180deg) translateX(10vw);
+
 }
 
 .card__face {
@@ -808,45 +814,39 @@ body { font-family: sans-serif; }
   background: slateblue;
   transform: rotateY(180deg);
 }
-.button{
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; 
-  transition-duration: 0.4s;
-}
-.button:hover{
-  box-shadow: 0 12px 16px 0 rgba(227, 109, 109, 0.24),0 17px 50px 0 rgba(229, 112, 112, 0.19);
-}
-.row{
+
+.row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.about-col-2{
+
+.about-col-2 {
   flex-basis: 60%;
 }
-.sub-title{
-  font-size: 30px;
+
+.sub-title {
+  font-size: 35px;
 }
-.tab-title{
+
+.tab-title {
   display: flex;
-  margin: 20px 0 40px;
+  margin: 10px 0 40px;
+  font-family: 'Ysabeau Infant';
+  font-style: italic;
+  font-weight: 700;
+  color: #00fff2;
 }
-.tab-links{
+
+.tab-links {
   margin-right: 50px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   cursor: pointer;
   position: relative;
 }
-.tab-links::after{
+
+.tab-links::after {
   content: '';
   width: 0;
   height: 3px;
@@ -856,22 +856,48 @@ body { font-family: sans-serif; }
   bottom: -8px;
   transition: 0.5s;
 }
-.tab-links.active-link::after{
+
+.tab-links.active-link::after {
   width: 50%;
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
   list-style: none;
   font-size: 18px;
   margin: 20px 0;
+  color: white;
 }
-.tab-contents ul li span{
-  color: #12fff7;
+
+.tab-contents ul li span {
+  color: #99fffc;
   font-size: 30px;
 
 }
-.tab-contents{
+
+.tab-contents {
   display: none;
+  animation: content-text 1s;
+  transition: 1s;
 }
-.tab-contents.active-tab{
+
+.tab-contents.active-tab {
   display: block;
+
+}
+
+.about-text {
+  color: white;
+  font-family: 'Ysabeau Infant';
+  font-style: italic;
+  font-weight: 700;
+}
+
+@keyframes content-text {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
