@@ -449,18 +449,18 @@ section .text-container .text-box {
   width: 50%;
 }
 
-@media screen and (max-width: 640px) {
-  .container {
+/* @media screen and (max-width: 640px) {
+  .containers {
     display: block;
     width: 100%;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .container {
+  .containers {
     width: 33.33333%;
   }
-}
+} */
 
 #section-3 .containers .title {
   color: #1a1a1a;
@@ -759,15 +759,17 @@ text-underline-offset: 1em;
 
 .contact-img {
   height: 32vw;
-  margin: 2rem;
+  /* margin: 2rem; */
   border-radius: 20px;
-  display: flex;
+  display: block;
 }
 
 body {
   font-family: sans-serif;
 }
-
+#section-4 .text-container{
+ padding: 0;
+}
 .scene {
   display: inline-block;
   width: 20vw;
