@@ -207,11 +207,12 @@ section h2 {
 }
 
 #section-2 img {
-  display: block;
-  float: right;
-  margin-right: 13%;
+  display: flex;
+  width: 100%;
+  /* float: right; */
+  /* margin-right: 13%;
   margin-top: 3%;
-  margin-left: 7%;
+  margin-left: 7%; */
   border-radius: 20px;
   transition: linear 0.5s;
   filter: grayscale(60%);
@@ -817,12 +818,15 @@ body {
   transform: rotateY(180deg);
 }
 
-.row {
+.row-1{
   display: flex;
+  /* flex-direction:row-reverse; */
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+.about-col-1{
+  flex-basis: 35%;
+}
 .about-col-2 {
   flex-basis: 60%;
 }
