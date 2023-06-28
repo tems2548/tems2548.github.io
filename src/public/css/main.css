@@ -1,0 +1,100 @@
+.container-3 {
+  text-align: center; }
+
+.card-3 {
+  display: inline-block;
+  height: 20em;
+  font-family: sans-serif;
+  color: #353A3E;
+  margin: 0 auto;
+  text-align: left; }
+  .card-3 .main-content-3 {
+    position: relative;
+    width: 15em;
+    height: 100%;
+    background-color: #F0EFEF;
+    margin-top: 1em;
+    margin-right: 0px;
+    transition: margin .25s; }
+  .card-3 .image-placeholder {
+    background-color: #459CC2;
+    height: 10em; }
+  .card-3 .card-body-3 {
+    padding: 1em; }
+  .card-3 .more-content {
+    position: absolute;
+    z-index: 0;
+    left: 75%;
+    top: 43%;
+    height: 3em;
+    width: 3em;
+    border-radius: 100%;
+    background-color: #EF4130;
+    overflow: hidden;
+    transition: all .25s,
+ box-shadow .25s,
+ border-radius .05s .40s,
+ left .25s .0s,
+ top .25s .25s,
+ height .25s .25s,
+ width .25s .0s,
+ background-color .25s .0s; }
+  .card-3:hover .more-content {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.35); }
+  .card-3 .more-body {
+    display: inline-block;
+    width: 90%;
+    height: 100%;
+    overflow: auto;
+    float: right;
+    opacity: 0;
+    transform: translateX(-10px); }
+  .card-3 .more-body h4 {
+    margin-top: 18px; }
+  .card-3 .more-body p {
+    padding-right: 3em; }
+  .card-3 .button {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #F0EFEF;
+    border-radius: 100%;
+    transition: color .25s .1s; }
+  .card-3 .rotate {
+    transition: transform 1.25s; }
+
+.main-content.active {
+  margin-right: 30em;
+  transition: all .25s .35s; }
+
+.more-content.expanded {
+  z-index: 0;
+  left: 100%;
+  top: -3%;
+  border-radius: 0;
+  height: 106%;
+  width: 30em;
+  background-color: #F0EFEF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: all .25s,
+ left .25s 0s,
+ top .25s .1s,
+ height .25s .1s,
+ width .25s .35s; }
+  .more-content.expanded .button {
+    color: #EF4130;
+    transition: color .25s .1s; }
+  .more-content.expanded:hover {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5); }
+  .more-content.expanded .rotate {
+    transform: rotate(495deg);
+    transition: transform 1.25s; }
+  .more-content.expanded .more-body {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all .25s .65s; }
