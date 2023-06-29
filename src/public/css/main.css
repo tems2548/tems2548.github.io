@@ -1,8 +1,10 @@
 .container-3 {
-  text-align: center; }
+  text-align: center; 
+  width: 100%;
+}
 
 .card-3 {
-  display: inline-block;
+  display: block;
   height: 20em;
   font-family: sans-serif;
   color: #353A3E;
@@ -10,22 +12,25 @@
   text-align: left; }
   .card-3 .main-content-3 {
     position: relative;
-    width: 15em;
+    width: 90%;
     height: 100%;
     background-color: #F0EFEF;
+    border-radius: 1em;
     margin-top: 1em;
     margin-right: 0px;
     transition: margin .25s; }
   .card-3 .image-placeholder {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
     background-color: #459CC2;
-    height: 10em; }
+    height: 15em; }
   .card-3 .card-body-3 {
     padding: 1em; }
   .card-3 .more-content {
     position: absolute;
-    z-index: 0;
-    left: 75%;
-    top: 43%;
+    z-index: 1000;
+    left: 85%;
+    top: 50%;
     height: 3em;
     width: 3em;
     border-radius: 100%;
@@ -73,12 +78,12 @@
   transition: all .25s .35s; }
 
 .more-content.expanded {
-  z-index: 0;
+  z-index: 9999;
   left: 100%;
   top: -3%;
-  border-radius: 0;
+  border-radius: 10px;
   height: 106%;
-  width: 30em;
+  width: 17em;
   background-color: #F0EFEF;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
   transition: all .25s,

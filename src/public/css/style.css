@@ -27,7 +27,7 @@
   border-radius: 50%;
   background: transparent;
   pointer-events: none;
-  z-index: 111;
+  z-index: 99999;
   border: 3px solid #ffffff;
   transition: all 0.01s ease-out;
   animation: moveCursor1 .5s infinite alternate;
@@ -915,4 +915,12 @@ body {
 }
 .location:hover{
   color:#ff1361;
+}
+.flex-box-3{
+  width: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  grid-template-columns: 1fr ;
 }
