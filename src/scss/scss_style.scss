@@ -4,8 +4,8 @@ $accent: #EF4130;
 $dark-grey: #353A3E;
 $light-grey: #61686D;
 $white: #F0EFEF;
-// node-sass src/scss/main.scss -o src/public/css
-// sass --watch src/scss/main.scss:src/public/css/main.css 
+// node-sass src/scss/scss_style.scss -o src/public/css
+// sass --watch src/scss/scss_style.scss:src/public/css/scss_style.css 
 .container-3 {
  text-align: left; 
  padding-left: 5rem;
