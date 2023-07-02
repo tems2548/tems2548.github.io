@@ -7,7 +7,14 @@
 @media (max-width: 1024px) {}
 
 @media (max-width: 800px) {
+  #section-2 .container {
+    margin: 0;
+  }
+  
   .cursor{
+    display: none;
+  }
+  .expand {
     display: none;
   }
  .about-text{
@@ -28,21 +35,21 @@
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: 1fr;
- justify-content: left;
+  justify-content: left;
 
  }
  .tab-contents{
   /* margin: 0 0 10rem 0; */
   /* width: 70vw; */
-  
+  /* display: block; */
   text-align: start;
  }
  .tab-contents ul li span {
-  font-size: 45px;
+  font-size: 30px;
 }
 
 .tab-contents ul li {
-  font-size: 24px;
+  font-size: 20px;
   margin: 20px 10px;
   color: white;
 }
@@ -60,7 +67,7 @@
   max-width: 80%;
 }
 #section-4 .container-2 {
-margin: auto;
+margin: 0;
 
   width: 100%;
   height: 80%;
@@ -97,19 +104,12 @@ margin: auto;
   width: 700px;
   height: 500px;
 }
-.card{
-  float: right;
-}
+
 .card.is-flipped {
   transform: rotateY(-180deg) translateX(-52vw);
 
 }
-.about-col-1{
-  display: inline-block;
-  /* object-fit:scale-down; */
-  /* width: 1px;
-  height: 1px; */
-}
+
 #section-4 h2 {
   font-size: 30px;
 }
