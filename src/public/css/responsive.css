@@ -4,11 +4,12 @@
 
 
 
-@media (max-width: 1024px) {
-  
-}
+@media (max-width: 1024px) {}
 
-/* @media (max-width: 1300px) {
+@media (max-width: 800px) {
+  .cursor{
+    display: none;
+  }
  .about-text{
   font-size: 30px;
  }
@@ -77,8 +78,6 @@ margin: auto;
   transform: rotateY(-180deg) translateX(-52vw);
 
 }
-} */
-
-@media (max-width: 500px) {
-  
 }
+
+@media (max-width: 500px) {}
