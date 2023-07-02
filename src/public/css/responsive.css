@@ -11,15 +11,29 @@
     display: none;
   }
  .about-text{
+  width: 80%;
+  text-align: start;
   font-size: 30px;
  }
+ .tab-links{
+  font-size: 20px;
+ }
+ .tab-links::after {
+  left: 40px;
+
+}
  .tab-title{
   margin-top: 3rem;
-  margin-left: 6rem;
+  margin-left: 0;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: 1fr;
+ justify-content: left;
+
  }
  .tab-contents{
-  margin: 0 0 10rem 0;
-width: 70vw;
+  /* margin: 0 0 10rem 0; */
+  /* width: 70vw; */
   
   text-align: start;
  }
@@ -28,7 +42,6 @@ width: 70vw;
 }
 
 .tab-contents ul li {
-
   font-size: 24px;
   margin: 20px 10px;
   color: white;
@@ -37,7 +50,7 @@ width: 70vw;
   font-size: 20px;
 }
 .sec-texts li {
-  font-size: 60px;
+  font-size: 20px;
 }
 #section-3 .containers {
   float: none;
@@ -53,9 +66,12 @@ margin: auto;
   height: 80%;
 
 }
+#section-4 .container-2 {
+  font-size: 15px;
+}
 #section-4 .text-container .text-box {
   color: #f4fafa;
-  font-size: 35px;
+  font-size: 10px;
 }
 .hover-underline-animation {
   padding-left: 5rem;
@@ -63,11 +79,21 @@ margin: auto;
   font-weight: bold;
   font-family: 'Ysabeau Infant';
 }
+.hover-underline-animation{
+  font-size: 12px;
+  padding-left:20px;
+  letter-spacing: normal;
+  display: flex;
+}
+#section-4 .container-2 ul li{
+  font-size: 12px;
+}
 #section-4 h2 {
   font-family: "Audiowide", sans-serif;
   font-size: 65px;
 }
 .card__face {
+  display: none;
   width: 700px;
   height: 500px;
 }
@@ -78,6 +104,16 @@ margin: auto;
   transform: rotateY(-180deg) translateX(-52vw);
 
 }
+.about-col-1{
+  display: inline-block;
+  /* object-fit:scale-down; */
+  /* width: 1px;
+  height: 1px; */
+}
+#section-4 h2 {
+  font-size: 30px;
+}
+
 }
 
 @media (max-width: 500px) {}
