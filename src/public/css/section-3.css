@@ -12,7 +12,7 @@
 #section-3 .containers {
   padding: 1rem;
   float: left;
-  width: 50%;
+  width: 70%;
 }
 
 /* @media screen and (max-width: 640px) {
@@ -37,7 +37,7 @@
 #section-3 .contents {
   position: relative;
   width: 100%;
-  max-width: 33vw;
+  max-width: 100%;
   margin: auto;
   overflow: hidden;
   transition: 0.7s;
@@ -150,7 +150,6 @@ pt {
   margin: 6vw;
   display: flex;
   justify-content: center;
-
 }
 
 .wrapper .first-text {
@@ -220,4 +219,13 @@ pt {
     left: 100%;
     margin: 0 -35px 0 35px;
   }
+}
+.flex-box-3 {
+  width: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
 }
