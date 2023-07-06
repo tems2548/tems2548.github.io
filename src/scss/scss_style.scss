@@ -8,7 +8,8 @@ $white: #F0EFEF;
 // sass --watch src/scss/scss_style.scss:src/public/css/scss_style.css 
 .container-3 {
  text-align: left; 
- padding-left: 5rem;
+ margin-left: auto;
+ margin-right: auto;
 }
 .card-3 {
   display: inline-block;
@@ -33,6 +34,10 @@ $white: #F0EFEF;
     border-radius: 20px 0 0 0;
     background-color: $primary;
     height: 10em;
+  }
+  & .fa {
+    
+    font-size: 60px;
   }
   & .card-body-3 {
     // font-size: 30rem;
