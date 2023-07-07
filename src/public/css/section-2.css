@@ -68,7 +68,7 @@
 }
 
 .sub-title {
-    font-size: 2.2vw;
+    font-size: 2vw;
 }
 
 .tab-title {
@@ -82,7 +82,7 @@
 
 .tab-links {
     margin-right: 50px;
-    font-size: 2vw;
+    font-size: 1.25vw;
     font-weight: 700;
     cursor: pointer;
     position: relative;
