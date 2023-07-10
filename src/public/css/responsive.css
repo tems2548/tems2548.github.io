@@ -8,7 +8,8 @@
 
 @media (max-width: 800px) {
   #section-2 .container {
-    margin: 0;
+    /* margin-right: auto;
+    margin-left: auto; */
   }
 
   .cursor {
@@ -42,7 +43,6 @@
   }
 
   .tab-contents {
-
     text-align: start;
   }
 
@@ -145,16 +145,16 @@
   }
 
   #section-2 img {
-    width: 100%;
+    width: 90%;
     float: none;
     height: 30vh;
     transition: linear 0.5s;
     filter: grayscale(0%);
-    margin: auto;
   }
 
   .about-col-1 {
-    padding-top: 1rem;
+    text-align: center;
+
   }
   #section-2 .text-container {
     padding-left: none;
@@ -162,10 +162,17 @@
   }
   .glitch {
   
-    font-size: 40px;
+    font-size: 20px;
  
   }
-  
+  #section-2 .text-container {
+    padding-left: auto;
+    padding-right: auto;
+  }
+  .about-col-2{
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 500px) {}

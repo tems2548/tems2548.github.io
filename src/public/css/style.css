@@ -85,6 +85,7 @@
 body {
   background: #000000;
 }
+
 #section-1 {
   width: 100%;
   min-height: 100vh;
@@ -97,6 +98,7 @@ body {
       #ff1361 67%,
       #fff800 100%);
 }
+
 #section-2 {
   width: 100%;
   min-height: 100vh;
@@ -114,7 +116,7 @@ body {
 }
 
 #section-4 {
-    width: 100%;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -144,15 +146,60 @@ section:nth-child(4) {
   background: black;
 }
 
-section .container {
+#section-1 .container {
 
   width: 100%;
   margin: 2rem;
 }
 
-section h1 {
+#section-2 .container {
+
+  width: 100%;
+  margin: 8vw;
+}
+
+#section-3 .container {
+
+  width: 100%;
+  margin: 2rem;
+}
+
+#section-4 .container {
+
+  width: 100%;
+  margin: 2rem;
+}
+
+
+
+
+
+
+
+#section-4 h1 {
   font-size: 10rem;
   margin: 20px;
+  animation: fade-bottom 0.4s;
+  color: #e0ffff;
+}
+
+#section-3 h1 {
+  font-size: 10rem;
+  margin: 20px;
+  animation: fade-bottom 0.4s;
+  color: #e0ffff;
+}
+
+#section-1 h1 {
+  font-size: 10rem;
+  margin: 20px;
+  animation: fade-bottom 0.4s;
+  color: #e0ffff;
+}
+
+#section-2 h1 {
+  font-size: 2rem;
+  /* margin: 10px; */
   animation: fade-bottom 0.4s;
   color: #e0ffff;
 }
@@ -165,6 +212,7 @@ section h2 {
   text-transform: uppercase;
 
 }
+
 #section-1 .text-container {
   padding-left: 5%;
   display: flex;
@@ -172,20 +220,22 @@ section h2 {
 }
 
 #section-2 .text-container {
-  
   display: flex;
   font-size: 2.5vw;
 }
+
 #section-3 .text-container {
   padding-left: 5%;
   display: flex;
   font-size: 2.5vw;
 }
+
 #section-4 .text-container {
   padding-left: 5%;
   display: flex;
   font-size: 2.5vw;
 }
+
 /* section .text-container {
   padding-left: 5%;
   display: flex;
