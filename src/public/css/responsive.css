@@ -145,7 +145,8 @@
   }
 
   #section-2 img {
-    width: 80%;
+    width: 100%;
+    float: none;
     height: 30vh;
     transition: linear 0.5s;
     filter: grayscale(0%);
@@ -159,6 +160,12 @@
     padding-left: none;
     display: block;
   }
+  .glitch {
+  
+    font-size: 40px;
+ 
+  }
+  
 }
 
 @media (max-width: 500px) {}

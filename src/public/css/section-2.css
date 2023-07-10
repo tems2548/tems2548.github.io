@@ -61,7 +61,9 @@
     flex-wrap: wrap;
 }
 
-
+.about-col-1{
+    flex-basis: 35%;
+}
 
 .about-col-2 {
     flex-basis: 60%;
@@ -156,11 +158,10 @@
 
 #section-2 img {
     /* margin-top: 1vw; */
-    display: flex;
     width: 100%;
     height: 60vh;
     object-fit: cover;
-    /* float: right; */
+    float: left;
     /* margin-right: 13%;
     margin-top: 3%;
     margin-left: 7%; */
