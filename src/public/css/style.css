@@ -155,7 +155,7 @@ section:nth-child(4) {
 #section-2 .container {
 
   width: 100%;
-  margin: 8vw;
+  margin-left: 8vw;
 }
 
 #section-3 .container {
