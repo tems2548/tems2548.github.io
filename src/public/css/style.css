@@ -131,7 +131,7 @@ section:nth-child(1) {
 }
 
 section:nth-child(2) {
-  color: #ffffff;
+  color: #111111;
   align-items: center;
   background: black;
 }
