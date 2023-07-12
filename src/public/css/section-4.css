@@ -23,6 +23,7 @@
   } */
 .hover-underline-animation {
   display: inline-block;
+  cursor:help;
   position: relative;
   text-decoration: none;
   color: #ffffff;
@@ -46,7 +47,6 @@
   top: auto;
   bottom: 0;
   left: 0;
-
   background-image: linear-gradient(-225deg,
       #b3ffab 0%,
       #12fff7 100%);
@@ -63,10 +63,10 @@
 #section-4 .container-2 {
   background-color: rgba(255, 255, 255, 0.426);
   width: 45vw;
-  height: 35vw;
+  height: 33vw;
   list-style: none;
   margin: 2rem;
-  padding-top: 1vh;
+  padding-top: 0.5vh;
   border-radius: 20px;
   background-image: linear-gradient(-225deg,
       #1d2b64 0%,

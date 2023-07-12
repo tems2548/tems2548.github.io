@@ -14,11 +14,11 @@
   }
 
   .cursor {
-    display: none;
+    display:block;
   }
 
   .expand {
-    display: none;
+    display: block;
   }
 
   .about-text {
