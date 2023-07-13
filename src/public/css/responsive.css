@@ -145,7 +145,7 @@
     display: block;
   }
 
-  #section-2 img {
+  #section-2 .img-about {
     width: 90%;
     float: none;
     height: 30vh;
@@ -173,6 +173,13 @@
   .about-col-2{
     text-align: center;
   }
+  .icon-skill{
+    padding: 0;
+    width: 60px;
+}
+.contain-skills{
+  width: 100%;
+}
 
 }
 
