@@ -148,7 +148,7 @@
   #section-2 .img-about {
     width: 90%;
     float: none;
-    height: 30vh;
+    height: 300px;
     transition: linear 0.5s;
     filter: grayscale(0%);
   }
