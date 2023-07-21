@@ -6,7 +6,7 @@
 
 .card-3 {
   display: inline-block;
-  height: 20em;
+  height: 27em;
   font-family: sans-serif;
   color: #353A3E;
   margin: 0 auto;
@@ -34,7 +34,7 @@
 .card-3 .card-body-3 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding: 0.5em;
-  font-size: 40px;
+  font-size: 60px;
 }
 .card-3 .more-content {
   position: absolute;

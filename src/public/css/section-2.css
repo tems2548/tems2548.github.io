@@ -61,7 +61,7 @@
     flex-wrap: wrap;
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 35%;
 }
 
@@ -134,6 +134,7 @@
     font-family: 'Ysabeau Infant';
     font-style: italic;
     font-weight: 700;
+    font-size: 3rem;
 }
 
 @keyframes content-text {
@@ -194,31 +195,31 @@
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .container-time {
+}
+
+/* Container around content */
+.container-time {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
-    
-  }
-  
-  /* The circles on the timeline */
-  .container-time::after {
+
+}
+
+/* The circles on the timeline */
+.container-time::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -229,20 +230,20 @@
     top: 15px;
     border-radius: 50%;
     z-index: 1;
-  }
-  
-  /* Place the container to the left */
-  .left {
+}
+
+/* Place the container to the left */
+.left {
     left: 0;
-  }
-  
-  /* Place the container to the right */
-  .right {
+}
+
+/* Place the container to the right */
+.right {
     left: 50%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .left::before {
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -253,10 +254,10 @@
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-  .right::before {
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -264,18 +265,18 @@
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid white;
+    border: medium solid rgb(255, 255, 255);
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .right::after {
+    border-color: transparent rgb(255, 255, 255) transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
     left: -16px;
-  }
-  
-  /* The actual content */
-  .content-time {
+}
+
+/* The actual content */
+.content-time {
     color: crimson;
     font-size: 20px;
     text-align: center;
@@ -283,51 +284,56 @@
     background-color: white;
     position: relative;
     border-radius: 6px;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
     /* Place the timelime to the left */
     .timeline::after {
-    left: 31px;
+        left: 31px;
     }
-    
+
     /* Full-width containers */
     .container-time {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+        width: 100%;
+        /* padding-left: 70px; */
+        padding-right: 25px;
     }
-    
+
     /* Make sure that all arrows are pointing leftwards */
     .container-time::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+        left: 30px;
+        border: medium solid rgb(255, 255, 255);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgb(255, 255, 255) transparent transparent;
     }
-  
+
     /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-    left: 15px;
+    .left::after,
+    .right::after {
+        left: -1px;
     }
-    
+
     /* Make all right containers behave like the left ones */
     .right {
-    left: 0%;
+        left: 0%;
     }
-  }
-  #section-2 .content-time h2 {
+}
+
+#section-2 .content-time h2 {
     padding: 0;
     font-size: 4rem;
-    color:#083042
-  }
-.icon-skill{
+    color: #083042
+}
+
+.icon-skill {
     width: 130px;
-   padding: 10px;
+    padding: 10px;
     transition: 0.5s linear;
 }
-.contain-skills{
+
+.contain-skills {
     width: 90%;
     padding-top: 1rem;
     display: grid;
@@ -336,4 +342,17 @@
     justify-content: center; */
     gap: 2rem;
 }
- 
+
+.sch-1 {
+    padding-bottom: 1rem;
+    width: 50%;
+    animation: content-text 1.4s;
+    transition: 1s;
+}
+
+.sch-2 {
+    padding-bottom: 1rem;
+    height: 15%;
+    animation: content-text 1.4s;
+    transition: 1s;
+}
