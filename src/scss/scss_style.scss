@@ -1,34 +1,34 @@
-$primary: #459CC2;
-$secondary: #6DCFF6;
-$accent: #EF4130;
-$dark-grey: #353A3E;
-$light-grey: #61686D;
+$primary: #459cc2;
+$secondary: #6dcff6;
+$accent: #ef4130;
+$dark-grey: #353a3e;
+$light-grey: #61686d;
 $white: #ffffff;
 // node-sass src/scss/scss_style.scss -o src/public/css
-// sass --watch src/scss/scss_style.scss:src/public/css/scss_style.css 
+// sass --watch src/scss/scss_style.scss:src/public/css/scss_style.css
 .container-3 {
- text-align: left; 
- margin-left: auto;
- margin-right: auto;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 .card-3 {
   display: inline-block;
-  height: 27em;
+  height: 20em;
   font-family: sans-serif;
   color: $dark-grey;
   margin: 0 auto;
   font-size: 1.2rem;
   text-align: left;
-    
-.main-content-3 {
+
+  .main-content-3 {
     position: relative;
     width: 30vw;
     height: 100%;
     background-color: $white;
     margin-top: 0em;
     margin-right: 0px;
-     border-radius: 20px 20px 20px 0px;
-    transition: margin .25s;
+    border-radius: 20px 20px 20px 0px;
+    transition: margin 0.25s;
   }
   & .image-placeholder {
     border-radius: 20px 0 0 0;
@@ -36,14 +36,13 @@ $white: #ffffff;
     height: 10em;
   }
   & .fa {
-    
     font-size: 60px;
   }
   & .card-body-3 {
     // font-size: 30rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     padding: 0.5em;
-    font-size: 60px;
+    font-size: 40px;
   }
 
   & .more-content {
@@ -56,18 +55,10 @@ $white: #ffffff;
     border-radius: 20%;
     background-color: $accent;
     overflow: hidden;
-    
-    
-    transition: all .25s,
-                box-shadow .25s,
-                border-radius .05s .40s,
-                left .25s .0s,
-                top .25s .25s,
-                height .25s .25s,
-                width .25s .0s,
-                background-color .25s .0s;
-      
-      
+
+    transition: all 0.25s, box-shadow 0.25s, border-radius 0.05s 0.4s,
+      left 0.25s 0s, top 0.25s 0.25s, height 0.25s 0.25s, width 0.25s 0s,
+      background-color 0.25s 0s;
   }
   &:hover .more-content {
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.35);
@@ -80,7 +71,7 @@ $white: #ffffff;
     overflow: auto;
     float: right;
     opacity: 0;
-    
+
     transform: translateX(-10px);
   }
   & .more-body h4 {
@@ -101,17 +92,16 @@ $white: #ffffff;
     color: $white;
     border-radius: 100%;
 
-    transition: color .25s .1s;
+    transition: color 0.25s 0.1s;
   }
   & .rotate {
-    transition: transform 1.25s,
+    transition: transform 1.25s;
   }
 }
 
 .main-content.active {
   margin-right: 30em;
-  
-  transition: all .25s .35s;
+  transition: all 0.25s 0.35s;
 }
 .more-content.expanded {
   z-index: 1000;
@@ -122,32 +112,28 @@ $white: #ffffff;
   width: 30em;
   background-color: $white;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-  
-  transition: all .25s,
-              left .25s 0s,
-              top .25s .1s,
-              height .25s .1s,
-              width .25s .35s;
 
-  
+  transition: all 0.25s, left 0.25s 0s, top 0.25s 0.1s, height 0.25s 0.1s,
+    width 0.25s 0.35s;
+
   .button {
     color: $accent;
-    
-    transition: color .25s .1s;
+
+    transition: color 0.25s 0.1s;
   }
   &:hover {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
   }
   & .rotate {
     transform: rotate(495deg);
-    
+
     transition: transform 1.25s;
   }
-  
+
   & .more-body {
     opacity: 1;
     transform: translateX(0px);
-    
-    transition: all .25s .65s;
+
+    transition: all 0.25s 0.65s;
   }
 }

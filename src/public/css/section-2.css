@@ -114,7 +114,7 @@
 
 .tab-contents ul li span {
     color: #99fffc;
-    font-size: 2vw;
+    font-size: 2.5vw;
 
 }
 
@@ -134,7 +134,7 @@
     font-family: 'Ysabeau Infant';
     font-style: italic;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.1rem;
 }
 
 @keyframes content-text {
@@ -278,7 +278,7 @@
 /* The actual content */
 .content-time {
     color: rgb(227, 69, 100);
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     padding: 20px 30px;
     background-color: white;
@@ -328,8 +328,8 @@
 }
 
 .icon-skill {
-    width: 130px;
-    padding: 10px;
+    width: 100px;
+    padding: 5px;
     transition: 0.5s linear;
 }
 
@@ -352,7 +352,7 @@
 
 .sch-2 {
     padding-bottom: 1rem;
-    height: 15%;
+    height: 10%;
     animation: content-text 1.4s;
     transition: 1s;
 }

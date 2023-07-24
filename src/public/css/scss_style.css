@@ -6,9 +6,9 @@
 
 .card-3 {
   display: inline-block;
-  height: 27em;
+  height: 20em;
   font-family: sans-serif;
-  color: #353A3E;
+  color: #353a3e;
   margin: 0 auto;
   font-size: 1.2rem;
   text-align: left;
@@ -25,7 +25,7 @@
 }
 .card-3 .image-placeholder {
   border-radius: 20px 0 0 0;
-  background-color: #459CC2;
+  background-color: #459cc2;
   height: 10em;
 }
 .card-3 .fa {
@@ -34,7 +34,7 @@
 .card-3 .card-body-3 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding: 0.5em;
-  font-size: 60px;
+  font-size: 40px;
 }
 .card-3 .more-content {
   position: absolute;
@@ -44,7 +44,7 @@
   height: 3em;
   width: 3em;
   border-radius: 20%;
-  background-color: #EF4130;
+  background-color: #ef4130;
   overflow: hidden;
   transition: all 0.25s, box-shadow 0.25s, border-radius 0.05s 0.4s, left 0.25s 0s, top 0.25s 0.25s, height 0.25s 0.25s, width 0.25s 0s, background-color 0.25s 0s;
 }
@@ -101,7 +101,7 @@
   transition: all 0.25s, left 0.25s 0s, top 0.25s 0.1s, height 0.25s 0.1s, width 0.25s 0.35s;
 }
 .more-content.expanded .button {
-  color: #EF4130;
+  color: #ef4130;
   transition: color 0.25s 0.1s;
 }
 .more-content.expanded:hover {

@@ -466,12 +466,17 @@ pt {
   border-radius: 20px;
   vertical-align: middle;
   animation: img-change 1s;
+  object-fit:scale-down;
   /* transition: 1s linear; */
+}
+.container-centi{
+  width: 100%;
+  height: 600px;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 900px;
   position: relative;
   margin: auto;
 }
@@ -485,9 +490,9 @@ pt {
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: rgb(0, 0, 0);
+  color: rgb(206, 110, 110);
   font-weight: bold;
-  font-size: 45px;
+  font-size: 60px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
