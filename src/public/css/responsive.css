@@ -133,18 +133,56 @@
     grid-template-columns: 1fr;
   }
 
-  .card-3 .card-body-3 {
+  .card-3 .card-body-3 {  
     font-size: 16px;
   }
 
-  .container-3 {
+  /* .container-3 {
+    display: none;
+  } */
+  .card-3 .image-placeholder {
+    background-color: #3aaedf;
+    height: 5em;
+  }
+  #div1,#div2,#div3,#div4{
     display: none;
   }
+  .card-3 .card-body-3 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding: 0.5em;
+    font-size: 50px;
+  }
+  .card-3 .more-content {
+    left: 5%;
+    /* height: 2em;
+    width: 2em; */
+  }
+  .more-content.expanded {
+    z-index: 1000;
+    left: -5%;
+    width: 95vw;
+    height: 120%;
+    top: 80%;
+  }
+  .card-3 .main-content-3 {
+    width: 90vw;
+    height: 20em;
+  }
+  .card-3 .button {
+    font-size: 1.5em;
+    /* padding-bottom: 20px; */
 
+  }
+.card-3 .more-body h4{
+  padding: 20px;
+  margin-top: 0px;
+}
   .row-1 {
     display: block;
   }
-
+  .glitch-wrapper {
+    padding-top: 30em;
+  }
   #section-2 .img-about {
     width: 90%;
     float: none;
@@ -163,7 +201,7 @@
   }
   .glitch {
   
-    font-size: 20px;
+    font-size: 60px;
  
   }
   #section-2 .text-container {
@@ -224,9 +262,7 @@
   width: 100%;
   height: 150px;
 }
-.glitch-wrapper {
-  padding-top: 8rem;
-}
+
 }
 
 @media (max-width: 500px) {}
