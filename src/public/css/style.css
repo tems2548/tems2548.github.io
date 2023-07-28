@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Asap", sans-serif;
+  font-family: 'Abel';
   scroll-behavior: smooth;
   cursor: none;
   user-select: none;
@@ -34,7 +34,7 @@
   background: transparent;
   pointer-events: none;
   z-index: 99999;
-  border: 3px solid #ff7676;
+  border: 3px solid #ffbebe;
   transition: all 0.01s ease-out;
   animation: moveCursor1 .5s infinite alternate;
 }

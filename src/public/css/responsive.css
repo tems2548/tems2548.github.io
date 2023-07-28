@@ -14,13 +14,27 @@
   }
 
   .cursor {
-    display:block;
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 99999;
+    border: 3px solid #ff7676;
+    transition: all 0.01s ease-out;
+    animation: moveCursor1 .5s infinite alternate;
   }
-
+  
   .expand {
-    display: block;
+    background: transparent;
+    animation: moveCursor2 .3s forwards;
+    border: 1px solid #000;
   }
-
   .about-text {
     width: 100%;
     text-align: center;
@@ -62,12 +76,15 @@
   }
 
   .sec-texts li {
-    font-size: 20px;
+    font-size: 40px;
+    height: 100px;
+    line-height: 120px;
+    overflow: hidden;
   }
 
   #section-3 .containers {
     float: none;
-    width: 100%;
+    width: 375px;
   }
 
   #section-3 .contents {
@@ -95,7 +112,7 @@
     /* padding-left: 5.5rem; */
     font-size: 21px;
     font-weight: bold;
-    font-family: 'Ysabeau Infant';
+    font-family: 'Abel';
   }
 
   .hover-underline-animation {
@@ -110,7 +127,7 @@
   }
 
   #section-4 h2 {
-    font-family: "Audiowide", sans-serif;
+    font-family: 'Abel';
     font-size: 65px;
   }
 
@@ -142,34 +159,35 @@
   } */
   .card-3 .image-placeholder {
     background-color: #3aaedf;
-    height: 5em;
+    height: 0;
   }
   #div1,#div2,#div3,#div4{
     display: none;
   }
   .card-3 .card-body-3 {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-family: 'Abel';
     padding: 0.5em;
-    font-size: 50px;
+    font-size: 40px;
   }
   .card-3 .more-content {
-    left: 5%;
-    height: 2.5em;
-    width: 2.5em;
+    top: 80%;
+    left: 85%;
+    height: 1.7em;
+    width: 1.7em;
   }
   .more-content.expanded {
     z-index: 1000;
-    left: -5%;
-    width: 95vw;
-    height: 105%;
+    left: -3%;
+    width: 80vw;
+    height: 160%;
     top: 80%;
   }
   .card-3 .main-content-3 {
-    width: 90vw;
-    height: 20em;
+    width: 300px;
+    /* height: 20em; */
   }
   .card-3 .button {
-    font-size: 1.2em;
+    font-size: 0.8em;
   }
 .card-3 .more-body h4{
   /* padding: 20px; */
@@ -179,7 +197,7 @@
     display: block;
   }
   .glitch-wrapper {
-    padding-top: 30em;
+    padding-top: 10em;
   }
   #section-2 .img-about {
     width: 90%;
@@ -217,7 +235,7 @@
   width: 100%;
 }
 .sec-texts li span::before {
-  height: 90px;
+  height: 100px;
 }
 .sch-2{
   height: 15%;
@@ -257,9 +275,17 @@
   font-size: 30px;
 }
 .container-centi{
+  padding: 10px;
   width: 100%;
   height: 150px;
 }
+#section-2 .content h2 {
+  color: #fff;
+  font-size: 45px;
+  position: absolute;
+  font-family: 'Abel';
+}
+
 
 }
 

@@ -11,13 +11,13 @@
     color: #fff;
     font-size: 6vw;
     position: absolute;
-    font-family: "Audiowide", sans-serif;
+    font-family: 'Abel';
 }
 
 #section-2 .content h2:nth-child(1) {
     color: transparent;
     text-align: center;
-    font-family: "Audiowide", sans-serif;
+    font-family: 'Abel';
     -webkit-text-stroke: 2px #03f7ff;
 }
 
@@ -76,7 +76,7 @@
 .tab-title {
     display: flex;
     margin: 10px 0 40px;
-    font-family: 'Ysabeau Infant';
+    font-family: 'Abel';
     font-style: italic;
     font-weight: 700;
     color: #00fff2;
@@ -131,7 +131,7 @@
 
 .about-text {
     color: white;
-    font-family: 'Ysabeau Infant';
+    font-family: 'Abel';
     font-style: italic;
     font-weight: 700;
     font-size: 2.1rem;
@@ -279,6 +279,7 @@
 .content-time {
     color: rgb(227, 69, 100);
     font-size: 30px;
+    font-family: 'Abel';
     text-align: center;
     padding: 20px 30px;
     background-color: white;
