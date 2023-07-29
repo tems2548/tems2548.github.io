@@ -92,11 +92,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(-225deg,
+  /* background-image: linear-gradient(-225deg,
       #231557 0%,
       #44107a 29%,
       #ff1361 67%,
-      #fff800 100%);
+      #fff800 100%); */
 }
 
 #section-2 {
