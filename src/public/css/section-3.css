@@ -215,7 +215,7 @@ pt {
   left: 0;
   width: 100%;
   height: 100px;
-  background: #000;
+  background: #000000;
   border-left: 3px solid #0ef;
   animation: typing 1.5s linear infinite alternate;
 }
@@ -467,10 +467,11 @@ pt {
   border-radius: 20px;
   vertical-align: middle;
   animation: img-change 1s;
-  object-fit:scale-down;
+  object-fit: scale-down;
   /* transition: 1s linear; */
 }
-.container-centi{
+
+.container-centi {
   width: 100%;
   height: 600px;
 }
