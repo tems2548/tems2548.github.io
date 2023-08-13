@@ -56,7 +56,7 @@
   pointer-events: none;
   z-index: 99999;
   /* border: 3px solid #ffbebe; */
-  transition: all 0.01s ease-out;
+  transition: all 0.01s linear;
   /* animation: moveCursor1 .5s infinite alternate; */
 }
 
