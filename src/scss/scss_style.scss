@@ -1,7 +1,7 @@
 $primary: #459cc2;
 $secondary: #6dcff6;
 $accent: #ef4130;
-$dark-grey: #353a3e;
+$dark-grey: #000000;
 $light-grey: #61686d;
 $white: #ffffff;
 // node-sass src/scss/scss_style.scss -o src/public/css
@@ -15,7 +15,7 @@ $white: #ffffff;
   display: inline-block;
   height: 10em;
   font-family: sans-serif;
-  color: #ffffff;
+  color: #000000;
   margin: 0 auto;
   // font-size: 1.2rem;
   text-align: left;
@@ -24,7 +24,7 @@ $white: #ffffff;
     position: relative;
     width: 30vw;
     height: 100%;
-    background-color: $dark-grey;
+    background-color: #ffffff;
     margin-top: 0em;
     margin-right: 0px;
     border-radius: 20px 20px 0px 0px;

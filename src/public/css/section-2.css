@@ -193,7 +193,7 @@
 
 .timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -201,7 +201,7 @@
 .timeline::after {
     content: '';
     position: absolute;
-    width: 6px;
+    width: 10px;
     background-color: rgb(255, 255, 255);
     top: 0;
     bottom: 0;
@@ -323,8 +323,8 @@
 }
 
 #section-2 .content-time h2 {
-    padding: 10px;
-    font-size: 3rem;
+    padding: 5px;
+    font-size: 2rem;
     color: #083042
 }
 

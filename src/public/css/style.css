@@ -21,29 +21,50 @@
   list-style: none;
   -webkit-user-select: none;
 }
+.main-page{
+  /* transition: 2s; */
+  animation: opac 1s ;
+}
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
 
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
 .cursor {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%);
   border-radius: 50%;
-  background: transparent;
+  background-color: #00fff7;
+  /* background: transparent; */
   pointer-events: none;
   z-index: 99999;
-  border: 3px solid #ffbebe;
+  /* border: 3px solid #ffbebe; */
   transition: all 0.01s ease-out;
-  animation: moveCursor1 .5s infinite alternate;
+  /* animation: moveCursor1 .5s infinite alternate; */
 }
 
-.expand {
+/* .expand {
   background: transparent;
   animation: moveCursor2 .3s forwards;
   border: 1px solid #000;
-}
+} */
 
 @keyframes moveCursor1 {
   0% {

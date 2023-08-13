@@ -74,6 +74,10 @@
   .wrapper .first-text {
     font-size: 20px;
   }
+  .psoload {
+    height: 300px;
+    width: 300px;
+  }
   /* .wrapper {
     margin: 0;
   } */
