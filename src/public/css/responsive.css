@@ -74,6 +74,9 @@
   .wrapper .first-text {
     font-size: 20px;
   }
+  #loader{
+    padding-top: 250px;
+  }
   .psoload {
     height: 300px;
     width: 300px;
@@ -327,6 +330,9 @@
   width: 100%;
   display: grid;
   gap: 2em;
+}
+#section-1 ul{
+  display: none;
 }
 }
 
