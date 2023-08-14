@@ -17,7 +17,7 @@
   .psoload *:before,
   .psoload *:after {
     box-sizing: border-box;
-    transition: all 0.3s;
+    transition: all 2s;
     -webkit-transition: all 0.3s;
   }
   
@@ -128,4 +128,8 @@
     right: 12px;
     transform: rotate(-48deg);
     -webkit-transform: rotate(-48deg);
+  }
+  #loader{
+    transition: 2s;
+    padding-top: 5vh;
   }
