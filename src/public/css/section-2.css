@@ -148,7 +148,6 @@
 
 .location {
     color: white;
-    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -355,4 +354,26 @@
     height: 10%;
     animation: content-text 1.4s;
     transition: 1s;
+}
+#spec{
+    color: #ffffff;
+}
+#ig,
+#fb,
+#gh {
+    font-size: 80px;
+    padding: 20px;
+    transition: 1s;
+}
+
+#ig:hover {
+    background: #d62976;
+}
+
+#fb:hover {
+    background: #4267B2;
+}
+
+#gh:hover {
+    background: #4c504c;
 }
