@@ -65,7 +65,7 @@
 	 transition: all 0.025s 0s ease-out;
 }
  div.cards {
-	 margin: 120px auto;
+	 margin: 0px auto;
 	 max-width: 100%;
 	 text-align: center;
 }
@@ -78,13 +78,14 @@
 	 position: relative;
 	 text-align: left;
 	 transition: all 0.3s 0s ease-in;
-   object-fit: contain;
 	 width: 300px;
 	 z-index: 1;
 }
  div.card img {
-	 max-width: 350px;
+	 height: 225px;
+   width: 300px;
    overflow: hidden;
+   object-fit: cover;
 }
  div.card .card__image-holder {
 	 background: rgba(0,0,0,0.1);

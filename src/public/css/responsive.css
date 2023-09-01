@@ -392,6 +392,10 @@
   #section-4 .container{
     margin: 0;
   }
+  div.cards {
+    margin: 0 auto;
+
+ }
 }
 
 @media (max-width: 1100px) {

@@ -240,7 +240,7 @@ pt {
 }
 
 .glitch-wrapper {
-  padding-top: 20vh;
+  margin-top: 20vh;
   width: 100%;
   height: 100%;
   display: flex;
