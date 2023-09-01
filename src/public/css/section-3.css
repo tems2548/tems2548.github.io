@@ -463,7 +463,7 @@ pt {
   display: none
 }
 
-#section-3 img,#section-4 img {
+#section-3 img{
   border-radius: 20px;
   vertical-align: middle;
   animation: img-change 1s;
