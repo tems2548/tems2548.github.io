@@ -68,12 +68,14 @@
 	 margin: 0px auto;
 	 max-width: 100%;
 	 text-align: center;
+	 display: grid;
+	 grid-template-columns: 1fr 1fr 1fr;
 }
  div.card {
 	 background: #ffffff;
 	 display: inline-block;
 	 margin: 8px;
-	 max-width: 800px;
+	 max-width: 1200px;
 	 /* perspective: 1000; */
 	 position: relative;
 	 text-align: left;
