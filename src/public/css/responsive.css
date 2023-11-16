@@ -395,8 +395,14 @@
   div.cards {
     margin: 0 auto;
     grid-template-columns: 1fr;
-
+    width: 300px;
  }
+ div.card img {
+  height: 225px;
+  width: 300px;
+  overflow: hidden;
+  object-fit: cover;
+}
  #section-4 h2{
   font-size: 30px;
  }
