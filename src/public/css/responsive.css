@@ -394,11 +394,13 @@
   }
   div.cards {
     margin: 0 auto;
+    grid-template-columns: 1fr;
 
  }
  #section-4 h2{
   font-size: 30px;
  }
+ 
 }
 
 @media (max-width: 1100px) {
