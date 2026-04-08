@@ -17,7 +17,9 @@ export const projects = [
     description: 'A high-performance spectrum analysis tool for 2.4GHz bands, designed for the IEECON 2026 conference.',
     longDescription: 'Developed for IEEE conference standards, this analyzer utilizes ESP32-S3 hardware to perform real-time packet sniffing and signal strength mapping. It features interference detection and channel occupancy visualization to optimize industrial wireless deployments.',
     image: proj1,
-    tags: ['ESP32', 'C++', 'RF_Analysis', 'IEEE']
+    tags: ['ESP32', 'C++', 'RF_Analysis', 'IEEE'],
+    progression: 100,
+    complexity: 70
   },
   {
     id: 2,
@@ -25,7 +27,9 @@ export const projects = [
     description: 'Implementation of a hybrid PID control system combining analog precision with digital flexibility.',
     longDescription: 'A custom-designed control system for high-speed actuator positioning. It integrates high-resolution ADC/DAC modules with a tuned PID algorithm to achieve sub-millisecond response times and minimal overshoot in critical hardware applications.',
     image: proj2,
-    tags: ['Analog', 'Control_Systems', 'STM32', 'PID']
+    tags: ['Analog', 'Control_Systems', 'STM32', 'PID'],
+    progression: 40,
+    complexity: 100
   },
   {
     id: 3,
@@ -33,7 +37,9 @@ export const projects = [
     description: 'Receiver module of an intelligent acoustics system that adjusts audio output based on crowd density.',
     longDescription: 'This project focuses on the receiver architecture of a distributed audio system. It uses ultrasonic and PIR sensors to estimate real-time crowd density, automatically adjusting gain levels to compensate for ambient noise while maintaining signal clarity.',
     image: proj3,
-    tags: ['Audio_DSP', 'Sensors', 'Real-Time', 'Distributed_Sys']
+    tags: ['Audio_DSP', 'Sensors', 'Real-Time', 'Distributed_Sys'],
+    progression: 100,
+    complexity: 80
   },
   {
     id: 4,
@@ -41,7 +47,9 @@ export const projects = [
     description: 'A multi-node ESP-Mesh home automation system integrated with a professional telemetry dashboard.',
     longDescription: 'Combining embedded control with modern cloud analytics, this system manages home modules while pushing telemetry data via MQTT to a Grafana dashboard. It allows for detailed monitoring of energy consumption, device status, and environmental trends.',
     image: proj4,
-    tags: ['IoT', 'Grafana', 'MQTT', 'Node-RED']
+    tags: ['IoT', 'Grafana', 'MQTT', 'Node-RED'],
+    progression: 100,
+    complexity: 70
   },
   {
     id: 5,
@@ -49,7 +57,9 @@ export const projects = [
     description: 'A specialized signal processing application for high-speed frequency domain analysis.',
     longDescription: 'Utilizes optimized Fast Fourier Transform (FFT) algorithms to process incoming analog signals. The system provides low-latency visual feedback on a high-refresh rate display, essential for hardware diagnostics and vibration monitoring.',
     image: proj5,
-    tags: ['Python', 'FFT', 'DSP', 'Visualization']
+    tags: ['Python', 'FFT', 'DSP', 'Visualization'],
+    progression: 100,
+    complexity: 90
   },
   {
     id: 6,
@@ -57,7 +67,9 @@ export const projects = [
     description: 'An automated end-to-end agricultural monitoring solution powered by renewable energy.',
     longDescription: 'This project integrates LoRaWAN for long-range sensor telemetry and features a high-efficiency MPPT solar charger. It autonomously manages irrigation and soil health based on live data from distributed environmental sensors.',
     image: proj6,
-    tags: ['Solar', 'LoRaWAN', 'Agriculture', 'Sustainability']
+    tags: ['Solar', 'LoRaWAN', 'Agriculture', 'Sustainability'],
+    progression: 100,
+    complexity: 60
   }
 ]
 

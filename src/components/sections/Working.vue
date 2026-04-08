@@ -52,25 +52,35 @@ const emit = defineEmits(['open-project'])
 
             <div class="mt-auto space-y-6 sm:space-y-8">
               <div class="flex items-center justify-between py-5 border-y border-white/10 font-mono-tech bg-white/[0.02] px-4 -mx-4 rounded-lg">
-                <div class="flex flex-col gap-3">
-                  <div class="flex flex-col gap-1">
-                    <span class="text-[7px] text-slate-500 uppercase tracking-widest font-black">Progression_Index</span>
-                    <div class="w-32 h-1 bg-slate-800 rounded-full overflow-hidden">
-                      <div class="h-full bg-gradient-to-r from-emerald-500 to-indigo-500 w-[98%] shadow-[0_0_10px_rgba(16,185,129,0.3)]"></div>
+                <div class="flex flex-col gap-4 flex-1 pr-6">
+                  <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center mb-0.5">
+                      <span class="text-[7px] text-slate-400 uppercase tracking-widest font-black">Progression_Index</span>
+                      <span class="text-[8px] text-emerald-400 font-black tracking-tighter">{{ project.progression }}%</span>
+                    </div>
+                    <div class="w-full h-2 bg-slate-900/80 rounded-full overflow-hidden border border-white/5 p-[1px]">
+                      <div class="h-full bg-gradient-to-r from-emerald-500 to-indigo-500 shadow-[0_0_12px_rgba(16,185,129,0.6)] transition-all duration-1000 rounded-full" :style="{ width: project.progression + '%' }"></div>
                     </div>
                   </div>
-                  <div class="flex flex-col gap-1">
-                    <span class="text-[7px] text-slate-500 uppercase tracking-widest font-black">Complexity_Index</span>
-                    <div class="w-32 h-1 bg-slate-800 rounded-full overflow-hidden">
-                      <div class="h-full bg-gradient-to-r from-amber-500 to-rose-500 w-[85%] shadow-[0_0_10px_rgba(251,191,36,0.3)]"></div>
+                  <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center mb-0.5">
+                      <span class="text-[7px] text-slate-400 uppercase tracking-widest font-black">Complexity_Index</span>
+                      <span class="text-[8px] text-amber-400 font-black tracking-tighter">{{ project.complexity }}%</span>
+                    </div>
+                    <div class="w-full h-2 bg-slate-900/80 rounded-full overflow-hidden border border-white/5 p-[1px]">
+                      <div class="h-full bg-gradient-to-r from-amber-500 to-rose-500 shadow-[0_0_12px_rgba(251,191,36,0.6)] transition-all duration-1000 rounded-full" :style="{ width: project.complexity + '%' }"></div>
                     </div>
                   </div>
                 </div>
                 <div class="text-right">
                   <span class="text-[8px] text-slate-400 uppercase tracking-widest block font-black mb-1">Status</span>
-                  <span class="text-xs text-emerald-400 font-black tracking-widest uppercase flex items-center gap-2">
+                  <span v-if="project.progression === 100" class="text-xs text-emerald-400 font-black tracking-widest uppercase flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                     Stable
+                  </span>
+                  <span v-else class="text-xs text-amber-400 font-black tracking-widest uppercase flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                    In_Progress
                   </span>
                 </div>
               </div>
