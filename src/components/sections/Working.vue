@@ -37,8 +37,8 @@ const emit = defineEmits(['open-project'])
             </div>
           </div>
 
-          <div class="p-6 sm:p-10 space-y-6 sm:space-y-8 flex-1 flex flex-col">
-            <div class="space-y-4 flex-1">
+          <div class="p-6 sm:p-10 space-y-6 sm:space-y-8 flex-1 flex flex-col cursor-pointer" @click="emit('open-project', project)">
+            <div class="space-y-4 flex-1" >
               <div class="flex flex-wrap gap-2">
                 <span v-for="tag in project.tags" :key="tag" class="text-[8px] font-black uppercase tracking-[0.2em] text-amber-400 bg-amber-500/5 px-2 py-0.5 rounded border border-amber-500/10 tag-glow-amber">
                   {{ tag }}
@@ -86,9 +86,9 @@ const emit = defineEmits(['open-project'])
               </div>
 
               <div class="flex items-center justify-between pt-2">
-                <button @click="emit('open-project', project)" class="text-xs font-black text-white uppercase tracking-[0.4em] flex items-center gap-3 group/link hover:text-amber-400 transition-all border-b border-transparent hover:border-amber-500 pb-1">
+                <button @click="emit('open-project', project)" class="text-xs font-black text-white uppercase tracking-[0.4em] flex items-center gap-3 group/link group-hover:text-amber-400 transition-all border-b border-transparent group-hover:border-amber-500 pb-1">
                   Access_Log
-                  <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </button>
                 <div class="flex gap-2">
                   <div v-for="i in 3" :key="i" class="w-1 h-1 rounded-full bg-amber-500/40 group-hover:bg-amber-500 transition-colors"></div>
