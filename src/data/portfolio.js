@@ -122,7 +122,7 @@ export const resources = [
     type: 'PDF_DOCUMENT',
     size: '1.2MB',
     clearance: 'LEVEL_01',
-    link: '/cv.pdf'
+    link: 'cv.pdf'
   },
   {
     name: 'Technical_Portfolio',
