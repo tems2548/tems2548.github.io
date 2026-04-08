@@ -82,7 +82,7 @@ onUnmounted(() => {
     
     <div class="absolute top-28 left-4 sm:left-8 z-20 flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-md bg-indigo-500/5 border border-indigo-500/20 text-indigo-300 text-[8px] sm:text-[10px] font-mono-tech uppercase tracking-[0.3em] backdrop-blur-sm shadow-xl">
       <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
-      Electronic Specialist // Embedded Eng.
+      Electronic Specialist // IoT Eng.
     </div>
 
     <!-- System Telemetry (Repositioned to Top Right) -->
@@ -142,7 +142,7 @@ onUnmounted(() => {
         <p class="text-lg sm:text-xl md:text-2xl text-slate-200 mb-8 sm:mb-12 max-w-2xl font-mono-tech leading-relaxed relative">
           <span class="absolute -left-4 top-0 bottom-0 w-[1px] bg-indigo-500/30"></span>
           <span class="text-amber">>></span> Executing: <span class="text-white">Hardware_Firmware_Integration.exe</span><br>
-          <span class="text-rose">>></span> Optimization: <span class="text-indigo-400">ESP32 / ESP8266 / RTOS</span>
+          <span class="text-rose">>></span> Optimization: <span class="text-indigo-400">ESP32 / ESP8266</span>
         </p>
 
         <div class="flex flex-col sm:flex-row justify-start items-center gap-4 sm:gap-6">
