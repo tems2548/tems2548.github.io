@@ -11,17 +11,60 @@
   scroll-behavior: smooth;
 }
 
+/* Copper Trace Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6366f1, #fbbf24);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
 body {
   margin: 0;
   font-family: "Helvetica Now", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: var(--color-dark-bg);
+  background-color: #020617;
   color: #f8fafc;
   overflow-x: hidden;
   position: relative;
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  /* PCB Substrate Feel */
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(99, 102, 241, 0.03) 1px, transparent 0),
+    linear-gradient(rgba(99, 102, 241, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px, 120px 120px, 120px 120px;
 }
+
+/* PCB Edge Connector Dividers */
+.edge-connector-divider {
+  width: 100%;
+  height: 20px;
+  background-image: repeating-linear-gradient(90deg, 
+    #fbbf24 0px, #fbbf24 8px, 
+    transparent 8px, transparent 16px);
+  opacity: 0.15;
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+/* Global Signal Bus Lines */
+.system-bus-line {
+  position: fixed;
+  background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.2), transparent);
+  width: 1px;
+  height: 100vh;
+  top: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bus-l-1 { left: 5%; }
+.bus-l-2 { left: 5.5%; width: 2px; opacity: 0.5; }
+.bus-r-1 { right: 5%; }
+.bus-r-2 { right: 5.5%; width: 2px; opacity: 0.5; }
 
 /* --- GLOBAL TECHNICAL OVERLAYS --- */
 body::before {
@@ -241,6 +284,215 @@ body::after {
   pointer-events: none;
 }
 
+/* --- SECTION 3.5: CERTIFICATES (IOT / ELECTRICAL HARDWARE) --- */
+.bg-iot-hardware {
+  background-color: #020617;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* PCB Circuit Substrate Pattern */
+.pcb-substrate {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(99, 102, 241, 0.05) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.pcb-trace-glowing {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, #6366f1, transparent);
+  box-shadow: 0 0 15px #6366f1;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: traceSignal 6s linear infinite;
+}
+
+.trace-v { width: 1px; height: 100%; top: -100%; }
+.trace-h { height: 1px; width: 100%; left: -100%; }
+
+@keyframes traceSignal {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(200%) translateX(200%); }
+}
+
+/* Hardware Card Styling */
+.hardware-module {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9));
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hardware-module::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: repeating-linear-gradient(90deg, #6366f1, #6366f1 2px, transparent 2px, transparent 6px);
+  opacity: 0.3;
+}
+
+.hardware-module:hover {
+  border-color: #6366f1;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+/* IC Chip Pins */
+.chip-pin {
+  position: absolute;
+  width: 4px;
+  height: 8px;
+  background: #475569;
+  border-radius: 1px;
+}
+
+.pin-l { left: -4px; border-left: 1px solid #6366f1; }
+.pin-r { right: -4px; border-right: 1px solid #6366f1; }
+
+.status-led {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.led-vcc { background-color: #22c55e; box-shadow: 0 0 5px #22c55e; }
+.led-data { background-color: #fbbf24; }
+
+.group:hover .led-data {
+  animation: blink 0.2s infinite;
+  box-shadow: 0 0 8px #fbbf24;
+}
+
+.verified-pulse {
+  animation: verifiedGlow 2s infinite;
+}
+
+@keyframes verifiedGlow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(34, 197, 94, 0.4)); color: #6366f1; }
+  50% { filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.8)); color: #22c55e; }
+}
+
+/* --- SECTION 5: RESOURCES (ACTIVE HARDWARE SCHEMATIC) --- */
+.bg-vault-resources {
+  background-color: #020617;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Schematic blueprint lines */
+.vault-schematic-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(99, 102, 241, 0.1) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.1) 2px, transparent 2px);
+  background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+  pointer-events: none;
+}
+
+.vault-signal-node {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #6366f1;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #6366f1;
+  pointer-events: none;
+  animation: signalTravel 15s linear infinite;
+}
+
+@keyframes signalTravel {
+  0% { transform: translate(0, 0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translate(100vw, 100vh); opacity: 0; }
+}
+
+.vault-tech-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(99, 102, 241, 0.05) 50%, transparent 52%);
+  background-size: 200% 200%;
+  animation: scannerGlow 10s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes scannerGlow {
+  0% { background-position: -100% -100%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Advanced Vault Decorations */
+.vault-data-stream {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.2), transparent);
+  pointer-events: none;
+}
+
+.vault-data-stream::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -1px;
+  width: 3px;
+  height: 20%;
+  background: linear-gradient(to bottom, transparent, #6366f1, transparent);
+  animation: dataDrop 4s linear infinite;
+}
+
+@keyframes dataDrop {
+  0% { top: -20%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.vault-scan-horiz {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+  animation: vaultScanVert 6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes vaultScanVert {
+  0%, 100% { top: 0%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.vault-hud-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  pointer-events: none;
+}
+
+@keyframes vaultPulse {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+}
+
 /* --- SECTION 4: CONTACT (SIGNAL WAVE) --- */
 .bg-signal-contact {
   background-color: #020617;
@@ -336,7 +588,7 @@ body::after {
 
 .pcb-card {
   background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
-  backdrop-blur: md;
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(79, 70, 229, 0.3);
   position: relative;
   z-index: 10;

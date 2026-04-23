@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 // Data
-import { projects, skills, education, profile } from './data/portfolio'
+import { projects, skills, education, profile, resources, certificates } from './data/portfolio'
 
 // Layout Components
 import Navbar from './components/layout/Navbar.vue'
@@ -12,10 +12,22 @@ import Footer from './components/layout/Footer.vue'
 import Hero from './components/sections/Hero.vue'
 import About from './components/sections/About.vue'
 import Working from './components/sections/Working.vue'
+import Certificates from './components/sections/Certificates.vue'
+import Resources from './components/sections/Resources.vue'
 import Contact from './components/sections/Contact.vue'
 
 const isLoading = ref(true)
+const isDark = ref(true)
 const activeTab = ref('personal')
+
+const toggleTheme = () => {
+  isDark.value = !isDark.value
+  if (isDark.value) {
+    document.documentElement.classList.remove('light-mode')
+  } else {
+    document.documentElement.classList.add('light-mode')
+  }
+}
 const showBars = ref(false)
 const isMenuOpen = ref(false)
 
@@ -100,6 +112,16 @@ const openProjectDetails = (project) => {
 
 const closeProjectDetails = () => {
   selectedProject.value = null
+  document.body.style.overflow = 'auto'
+}
+
+const openCertificate = (cert) => {
+  selectedCertificate.value = cert
+  document.body.style.overflow = 'hidden'
+}
+
+const closeCertificate = () => {
+  selectedCertificate.value = null
   document.body.style.overflow = 'auto'
 }
 
@@ -238,10 +260,76 @@ onUnmounted(() => {
     </div>
   </Transition>
 
+  <!-- Certificate Detail Modal -->
+  <Transition name="modal-tech">
+    <div v-if="selectedCertificate" class="fixed inset-0 z-[110] flex items-center justify-center p-4 sm:p-6 overflow-hidden">
+      <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-md" @click="closeCertificate"></div>
+      <div class="relative w-full max-w-2xl bg-slate-900 border border-emerald-500/30 rounded-2xl overflow-y-auto shadow-2xl pcb-card no-scrollbar">
+        <div class="modal-scan-line !bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.6)]"></div>
+        
+        <div class="p-6 sm:p-10 font-mono-tech flex flex-col">
+          <div class="flex justify-between items-start mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+              <span class="text-emerald-500 text-[10px] font-black uppercase tracking-[0.4em]">Auth_Credential_Verified</span>
+            </div>
+            <button @click="closeCertificate" class="text-slate-500 hover:text-white transition uppercase text-[10px] tracking-widest">[CLOSE_X]</button>
+          </div>
+
+          <div v-if="selectedCertificate.image" class="aspect-[1.414/1] w-full bg-slate-950 rounded-lg border border-slate-800 overflow-hidden mb-8 group">
+            <img :src="selectedCertificate.image" :alt="selectedCertificate.title" class="w-full h-full object-contain">
+          </div>
+          <div v-else class="aspect-[1.414/1] w-full bg-slate-950 rounded-lg border border-slate-800 flex flex-col items-center justify-center mb-8">
+             <svg class="w-16 h-16 text-slate-800 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+             </svg>
+             <span class="text-[8px] text-slate-700 uppercase tracking-[0.4em]">Preview_Not_Available</span>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tighter mb-2">{{ selectedCertificate.title }}</h2>
+              <p class="text-indigo-400 text-sm font-bold uppercase tracking-widest">{{ selectedCertificate.issuer }}</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 border-y border-slate-800 py-6">
+              <div>
+                <span class="block text-[8px] text-slate-500 uppercase tracking-widest mb-1">Issue_Date</span>
+                <span class="text-xs text-white font-bold">{{ selectedCertificate.date }}</span>
+              </div>
+              <div>
+                <span class="block text-[8px] text-slate-500 uppercase tracking-widest mb-1">Status</span>
+                <span class="text-xs text-emerald-500 font-bold uppercase">Verified_Valid</span>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-[10px] font-black text-amber uppercase tracking-[0.3em] mb-3">>> credential_summary</h3>
+              <p class="text-sm text-slate-300 leading-relaxed font-sans">{{ selectedCertificate.description }}</p>
+            </div>
+          </div>
+
+          <div class="mt-10 pt-8 border-t border-slate-800 flex flex-col sm:flex-row gap-4">
+            <a :href="selectedCertificate.link" target="_blank" class="flex-1 inline-flex items-center gap-3 justify-center px-8 py-4 bg-indigo-600 text-white font-black text-xs uppercase tracking-widest hover:bg-indigo-500 transition-colors">
+              Verify_External_Link
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Transition>
+
   <div class="min-h-screen bg-slate-950 text-slate-200 selection:bg-indigo-500/30 overflow-x-hidden relative">
     <!-- Global Technical Overlays -->
     <div class="technical-overlay"></div>
     <div v-if="isGlitching" class="fixed inset-0 z-[200] pointer-events-none glitch-overlay"></div>
+    
+    <!-- System Bus Lines -->
+    <div class="system-bus-line bus-l-1"></div>
+    <div class="system-bus-line bus-l-2"></div>
+    <div class="system-bus-line bus-r-1"></div>
+    <div class="system-bus-line bus-r-2"></div>
     
     <!-- Floating Binary Background Particles (Enhanced) -->
     <div class="binary-particles">
@@ -290,6 +378,12 @@ onUnmounted(() => {
       :visibleSections="visibleSections"
       :projects="projects"
       @open-project="openProjectDetails"
+    />
+
+    <Certificates 
+      :visibleSections="visibleSections"
+      :certificates="certificates"
+      @view-certificate="openCertificate"
     />
 
     <Resources 

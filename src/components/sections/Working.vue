@@ -9,6 +9,7 @@ const emit = defineEmits(['open-project'])
 
 <template>
   <section id="working" class="py-32 px-4 z-10 relative bg-blueprint-working overflow-hidden">
+    <!-- Schematic Overlay Details -->
     <div class="absolute top-10 right-10 font-mono-tech text-[8px] text-white/10 space-y-1 select-none">
       <p>GRID_REF: 0x44.22</p>
       <p>STRUCT_INTEGRITY: 100%</p>
@@ -17,6 +18,7 @@ const emit = defineEmits(['open-project'])
 
     <div class="max-w-7xl mx-auto transition-all duration-1000"
          :class="visibleSections.has('working') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+      
       <div class="text-center mb-16 sm:mb-24 relative">
         <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-40 h-40 bg-indigo-500/5 rounded-full blur-3xl"></div>
         <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tighter italic uppercase relative z-10">Vault_Access</h2>

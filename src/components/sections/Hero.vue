@@ -80,9 +80,27 @@ onUnmounted(() => {
            class="relative min-h-screen flex items-center pt-24 px-4 bg-circuit-home overflow-hidden group"
            @mousemove="emit('mouse-move', $event)" @mouseleave="emit('mouse-leave')">
     
-    <div class="absolute top-28 left-4 sm:left-8 z-20 flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-md bg-indigo-500/5 border border-indigo-500/20 text-indigo-300 text-[8px] sm:text-[10px] font-mono-tech uppercase tracking-[0.3em] backdrop-blur-sm shadow-xl">
-      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
-      Electronic Specialist // IoT Eng.
+    <div class="absolute top-28 left-4 sm:left-8 z-20 flex items-center gap-6">
+      <div class="flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-md bg-indigo-500/5 border border-indigo-500/20 text-indigo-300 text-[8px] sm:text-[10px] font-mono-tech uppercase tracking-[0.3em] backdrop-blur-sm shadow-xl">
+        <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
+        Electronic Specialist // IoT Eng.
+      </div>
+      
+      <!-- Hardware Status LEDs -->
+      <div class="hidden sm:flex items-center gap-4 px-4 py-2 border border-white/5 bg-slate-900/40 rounded-lg backdrop-blur-sm">
+        <div class="flex flex-col items-center gap-1">
+          <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_#10b981]"></div>
+          <span class="text-[6px] text-slate-500 font-bold font-mono-tech">PWR</span>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <div class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse shadow-[0_0_8px_#6366f1]"></div>
+          <span class="text-[6px] text-slate-500 font-bold font-mono-tech">LINK</span>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <div class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-flicker shadow-[0_0_8px_#f59e0b]"></div>
+          <span class="text-[6px] text-slate-500 font-bold font-mono-tech">DATA</span>
+        </div>
+      </div>
     </div>
 
     <!-- System Telemetry (Repositioned to Top Right) -->

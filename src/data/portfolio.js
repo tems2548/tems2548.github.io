@@ -144,3 +144,30 @@ export const resources = [
     link: '#'
   }
 ]
+
+export const certificates = [
+  {
+    id: 1,
+    title: 'Certified IoT Professional',
+    issuer: 'IoT Academy',
+    date: '2023',
+    description: 'Advanced certification covering industrial IoT protocols, security, and edge computing.',
+    link: '#'
+  },
+  {
+    id: 2,
+    title: 'Embedded Systems Expert',
+    issuer: 'Tech University',
+    date: '2022',
+    description: 'Specialization in real-time operating systems (FreeRTOS) and STM32 hardware abstraction layers.',
+    link: '#'
+  },
+  {
+    id: 3,
+    title: 'Full-Stack Development',
+    issuer: 'Web Dev Institute',
+    date: '2021',
+    description: 'Comprehensive course on modern web technologies including Vue.js, Node.js, and cloud deployment.',
+    link: '#'
+  }
+]

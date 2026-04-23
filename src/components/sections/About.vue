@@ -38,66 +38,83 @@ const emit = defineEmits(['set-tab'])
         </button>
       </div>
       
-      <div class="pcb-card p-8 md:p-12 rounded-2xl min-h-[400px] border-indigo-500/20 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+      <div class="pcb-card p-8 md:p-12 rounded-2xl min-h-[400px] border-indigo-500/20 shadow-[0_0_30px_rgba(0,0,0,0.5)] relative overflow-hidden">
+        <!-- Internal PCB Traces -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+          <div class="absolute top-1/4 left-0 w-full h-[1px] bg-indigo-500"></div>
+          <div class="absolute top-2/4 left-0 w-full h-[1px] bg-indigo-500"></div>
+          <div class="absolute top-0 left-1/3 w-[1px] h-full bg-indigo-500"></div>
+          <div class="absolute top-0 left-2/3 w-[1px] h-full bg-indigo-500"></div>
+        </div>
+
         <Transition name="tab-slide" mode="out-in">
           <!-- Bio -->
-          <div v-if="activeTab === 'personal'" key="personal" class="w-full grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 font-mono-tech">
+          <div v-if="activeTab === 'personal'" key="personal" class="w-full grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 font-mono-tech relative z-10">
             <div class="md:col-span-5">
               <div class="aspect-[4/5] rounded-2xl bg-slate-950 border border-slate-800 flex flex-col items-center justify-center text-slate-400 group hover:border-amber-500/50 transition-all relative overflow-hidden chip-decoration shadow-2xl">
                 <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fbbf24_1px,transparent_1px)] [background-size:10px_10px]"></div>
                 <div class="bio-scan-line"></div>
                 <img :src="profile.image" :alt="profile.name" class="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-700 relative z-10">
-                <div class="absolute top-4 left-4 text-[10px] text-indigo-500 opacity-50 z-20 font-black">REL::0.42</div>
-                <div class="absolute bottom-4 right-4 text-[10px] text-indigo-500 opacity-50 z-20 font-black">SIG::STABLE</div>
+                <div class="absolute top-4 left-4 text-[10px] text-indigo-500 z-20 font-black px-2 py-1 bg-slate-950/80 rounded border border-indigo-500/20">PART::{{ profile.nickname.toUpperCase() }}_V1</div>
+                <div class="absolute bottom-4 right-4 text-[10px] text-emerald-500 z-20 font-black px-2 py-1 bg-slate-950/80 rounded border border-emerald-500/20">SIG::STABLE</div>
               </div>
-              <div class="mt-6 p-4 border border-slate-800 rounded-lg bg-slate-950/50 space-y-2">
-                <div class="flex justify-between text-[8px] uppercase tracking-widest">
-                  <span class="text-slate-500">Status:</span>
-                  <span class="text-emerald-500 font-black">AUTHORIZED_ENTITY</span>
+              <div class="mt-6 p-4 border border-slate-800 rounded-lg bg-slate-950/50 space-y-3">
+                <div class="flex justify-between text-[8px] uppercase tracking-widest border-b border-white/5 pb-2">
+                  <span class="text-slate-500">Device_Status:</span>
+                  <span class="text-emerald-500 font-black flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    READY
+                  </span>
                 </div>
                 <div class="flex justify-between text-[8px] uppercase tracking-widest">
-                  <span class="text-slate-500">Auth_Level:</span>
-                  <span class="text-amber font-black">ADMIN_ROOT_ACCESS</span>
+                  <span class="text-slate-500">I/O_Channels:</span>
+                  <span class="text-amber font-black">UART / I2C / SPI</span>
                 </div>
               </div>
             </div>
             <div class="md:col-span-7 space-y-8">
               <div>
                 <div class="flex items-center gap-2 mb-4">
-                  <span class="text-sm font-black text-amber uppercase tracking-[0.5em]">>> user_profile_cfg</span>
+                  <span class="text-sm font-black text-amber uppercase tracking-[0.5em]">>> component_spec.json</span>
                   <div class="h-[1px] flex-1 bg-slate-800"></div>
                 </div>
                 <div class="p-6 bg-slate-950/30 border border-slate-800 rounded-lg relative group">
-                  <div class="absolute top-0 right-0 p-2 text-[8px] text-slate-700 uppercase tracking-widest">Read_Only_Block</div>
+                  <div class="absolute top-0 right-0 p-2 text-[8px] text-slate-700 uppercase tracking-widest font-black">ROM_BLOCK_0x00</div>
                   <p class="text-base md:text-lg text-slate-200 leading-relaxed font-sans tech-typing">
-                    I am <strong>{{ profile.name }}</strong> or you can call me <strong>{{ profile.nickname }}</strong>, a dedicated IoT engineer with a passion for the Internet of Things (IoT). I thrive at the intersection of hardware and software, transforming complex circuit designs into functional, web-controlled systems. My focus is on creating reliable, scalable, and intuitive engineering solutions.
+                    I am <strong>{{ profile.name }}</strong>, a hardware-focused <strong>IoT Engineer</strong> specializing in embedded systems and real-time distributed networks. I transform circuit schematics into intelligent, interconnected ecosystems, bridging the physical layer with high-level cloud infrastructure.
                   </p>
                 </div>
               </div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div class="space-y-4">
-                  <h4 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.3em]">Hardware_Spec</h4>
-                  <div class="space-y-2 border-l border-indigo-500/20 pl-4">
+                <div class="space-y-4 p-4 border border-indigo-500/10 rounded-lg bg-indigo-500/5">
+                  <h4 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.3em] flex items-center gap-2">
+                    <span class="w-2 h-[1px] bg-indigo-500"></span>
+                    Control_Unit
+                  </h4>
+                  <div class="space-y-2 font-mono-tech">
                     <div class="flex flex-col">
-                      <span class="text-[8px] text-slate-500 uppercase">Core_Module</span>
-                      <span class="text-sm text-white">IoT_ENGINEERING_KMITL</span>
+                      <span class="text-[7px] text-slate-500 uppercase">Architecture</span>
+                      <span class="text-xs text-white">IOT_SYSTEMS_KMITL</span>
                     </div>
                     <div class="flex flex-col">
-                      <span class="text-[8px] text-slate-500 uppercase">Comm_Link</span>
-                      <span class="text-sm text-amber">{{ profile.email }}</span>
+                      <span class="text-[7px] text-slate-500 uppercase">Comm_Protocol</span>
+                      <span class="text-xs text-amber">{{ profile.email }}</span>
                     </div>
                   </div>
                 </div>
-                <div class="space-y-4">
-                  <h4 class="text-xs font-bold text-rose-400 uppercase tracking-[0.3em]">Network_Params</h4>
-                  <div class="space-y-2 border-l border-rose-500/20 pl-4">
+                <div class="space-y-4 p-4 border border-rose-500/10 rounded-lg bg-rose-500/5">
+                  <h4 class="text-xs font-bold text-rose-400 uppercase tracking-[0.3em] flex items-center gap-2">
+                    <span class="w-2 h-[1px] bg-rose-500"></span>
+                    External_Bus
+                  </h4>
+                  <div class="space-y-2 font-mono-tech">
                     <div class="flex flex-col">
-                      <span class="text-[8px] text-slate-500 uppercase">Geo_Coordinates</span>
-                      <span class="text-sm text-white">{{ profile.location }}</span>
+                      <span class="text-[7px] text-slate-500 uppercase">Coordinates</span>
+                      <span class="text-xs text-white">{{ profile.location }}</span>
                     </div>
                     <div class="flex flex-col">
-                      <span class="text-[8px] text-slate-500 uppercase">System_Uptime</span>
-                      <span class="text-sm text-rose-400">{{ profile.age }}_YEARS_STABLE</span>
+                      <span class="text-[7px] text-slate-500 uppercase">Cycles</span>
+                      <span class="text-xs text-rose-400">{{ profile.age }}_YEARS_NOMINAL</span>
                     </div>
                   </div>
                 </div>
@@ -145,7 +162,6 @@ const emit = defineEmits(['set-tab'])
                     <div class="absolute inset-0 flex justify-between px-1 pointer-events-none opacity-20">
                       <div v-for="i in 10" :key="i" class="w-[1px] h-full bg-white/20"></div>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[loading_1.5s_ease-in-out_infinite]"></div>
                   </div>
                 </div>
               </div>
@@ -168,7 +184,7 @@ const emit = defineEmits(['set-tab'])
                   <span class="text-[8px] px-1 border border-emerald-500/30 text-emerald-400 uppercase hidden sm:inline">Verified</span>
                 </div>
                 <div class="flex flex-col md:flex-row gap-6 sm:gap-8 p-4 sm:p-6 items-center md:items-start">
-                  <div class="w-24 h-24 sm:w-40 sm:h-40 flex-shrink-0 rounded bg-slate-950/80 border border-slate-800 relative flex items-center justify-center p-2 sm:p-3 shadow-inner group-hover:border-rose-500/40 transition-colors">
+                  <div class="w-24 h-24 sm:w-40 sm:h-40 flex-shrink-0 rounded bg-slate-950 border border-slate-800 relative flex items-center justify-center p-2 sm:p-3 shadow-inner group-hover:border-rose-500/40 transition-colors">
                     <img :src="edu.image" :alt="edu.degree" class="max-w-full max-h-full object-contain">
                     <div class="absolute -bottom-2 -right-2 px-1 bg-slate-900 border border-slate-800 text-[6px] text-slate-500 font-mono">IMG_0{{ index }}</div>
                   </div>
